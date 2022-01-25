@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #802d22 1.18%, #d3d026 100%);
+    color: white;
+    padding: 20px;
+}
+
+.header--image {
+    height: 100%;
+    margin-right: 6px;
+}
+
+.header--title {
+    font-size: 2rem;
+    margin-right: auto;
+}
+
+.header--project {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* for the footer */
+.footer {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #000000 70.18%, #61DBFB  100%);
+    color: white;
+    padding: 20px;
+    margin-top: 1.5rem;
+}
+
+.footer--image {
+    height: 100%;
+    margin-right: 6px;
+}
+
+.footer--title {
+    font-size: 2rem;
+    margin-right: auto;
+}
+
+.footer--project {
+    font-size: 1.25rem;
+    font-weight: 500;
+}

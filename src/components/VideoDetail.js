@@ -3,7 +3,11 @@ import {Paper, Typography} from '@material-ui/core'
 
 const VideoDetail =({video}) => {
 
- if (!video) return <div>Loading...</div>
+ if (!video) return (
+   <div style={{ textAlign: 'center' }}>
+     Type in the search bar for videos you want...
+   </div>
+ )
  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
  return (
    <React.Fragment>

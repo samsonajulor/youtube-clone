@@ -1,7 +1,8 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-import { SearchBar, VideoList, VideoDetail} from './components'
+import { SearchBar, VideoList, VideoDetail, Header, Footer} from './components'
 import youtube from './api/youtube'
+import './index.css'
 
 class App extends React.Component {
   state = {
@@ -24,22 +25,30 @@ class App extends React.Component {
   }
  render (){
    const {selectedVideo, videos} = this.state
-  return(
-   <Grid justifyContent='center' container spacing={10}>
-     <Grid item xs={12}>
-      <Grid container spacing={10}>
-       <Grid item xs={12}>
-        <SearchBar onFormSubmit={this.handleSubmit}/>
-       </Grid>
-       <Grid item xs={8}>
-        <VideoDetail video={selectedVideo}/>
-       </Grid>
-       <Grid item xs={4}>
-        <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>
-       </Grid>
+  return (
+    <div>
+      <div>
+        <Header />
+      </div>
+      <Grid justifyContent='center' container spacing={10}>
+        <Grid item xs={12}>
+          <Grid container spacing={10}>
+            <Grid item xs={12}>
+              <SearchBar onFormSubmit={this.handleSubmit} />
+            </Grid>
+            <Grid item xs={8}>
+              <VideoDetail video={selectedVideo} />
+            </Grid>
+            <Grid item xs={4}>
+              <VideoList videos={videos} onVideoSelect={this.onVideoSelect} />
+            </Grid>
+          </Grid>
+        </Grid>
       </Grid>
-     </Grid>
-   </Grid>
+      <div>
+        <Footer />
+      </div>
+    </div>
   )
  }
 }
